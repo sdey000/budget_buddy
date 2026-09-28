@@ -51,7 +51,8 @@ budget_buddy/
 ├── savings_tracker.py   # Module 4 — Savings Goal Tracking
 ├── file_helper.py       # Loads/saves expenses, budgets, and the goal to disk
 ├── README.md
-└── statement.md
+├──statement.md
+└──.gitignore
 ```
 
 ## How to Run It
