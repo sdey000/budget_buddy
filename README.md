@@ -88,10 +88,10 @@ Testing the other prompts found more of the same problem: a non-numeric ID at up
 A different kind of bug: `search_expenses` compared dates as plain text, and since `DD-MM-YYYY` sorts by day first, a date-range search across months or years dropped valid results (a search from 10-12-2026 missed an expense on 05-01-2027). It now converts to real dates before comparing.
 
 ## Screenshots
-https://github.com/sdey000/budget_buddy/blob/4500cf0e97d381857af5bd8c9dba90bc6a4372a9/Screenshot_Menu.png
-https://github.com/sdey000/budget_buddy/blob/main/Screenshot_add_and_view_expense.png
-https://github.com/sdey000/budget_buddy/blob/main/Screenshot_budget.png
-https://github.com/sdey000/budget_buddy/blob/main/Screenshot_report.png
+![image alt](https://github.com/sdey000/budget_buddy/blob/0fa44ef8e32897c3d4f507c02191fbb59170941b/Screenshot_Menu.png)
+![image alt](https://github.com/sdey000/budget_buddy/blob/0fa44ef8e32897c3d4f507c02191fbb59170941b/Screenshot_add_and_view_expense.png)
+![image alt](https://github.com/sdey000/budget_buddy/blob/0fa44ef8e32897c3d4f507c02191fbb59170941b/Screenshot_budget.png)
+![image alt](https://github.com/sdey000/budget_buddy/blob/0fa44ef8e32897c3d4f507c02191fbb59170941b/Screenshot_report.png)
 
 ## Known Limitations
 
