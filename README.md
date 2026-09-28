@@ -91,15 +91,19 @@ A different kind of bug: `search_expenses` compared dates as plain text, and sin
 ## Screenshots
 
 Menu of the Program:
+
 ![image alt](https://github.com/sdey000/budget_buddy/blob/c190555fbad30701af65845e576635adfb744281/Screenshots/Screenshot_Menu.png)
 
 Adding an Expense and Viewing it along with a Previously Added One:
+
 ![image alt](https://github.com/sdey000/budget_buddy/blob/c190555fbad30701af65845e576635adfb744281/Screenshots/Screenshot_add_and_view_expense.png)
 
 Setting a Budget for a Specific Category and checking whether the Expenses have exceeded it:
+
 ![image alt](https://github.com/sdey000/budget_buddy/blob/c190555fbad30701af65845e576635adfb744281/Screenshots/Screenshot_budget.png)
 
 Analyzing the Report after adding multiple expenses:
+
 ![image alt](https://github.com/sdey000/budget_buddy/blob/c190555fbad30701af65845e576635adfb744281/Screenshots/Screenshot_report.png)
 
 ## Known Limitations
