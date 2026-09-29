@@ -4,11 +4,12 @@ A command-line budget and expense tracker written in Python for the VITyarthi "B
 
 ## Overview
 
-I split the code into four modules that map onto the four things a budget tracker actually needs to do: recording expenses, checking them against budgets, reporting on them, and tying them to a savings goal. `main.py` is just the menu loop - it doesn't do any of the actual logic itself, it calls into the other four files.
+I divided the code into four modules that map onto the four things a budget tracker actually needs to do: recording expenses, checking them against budgets, reporting on them, and tying them to a savings goal. `main.py` is just the menu loop - it doesn't do any of the actual logic itself, it calls into the other four files.
 
-I kept storage as plain `.txt` files with `|` as a field separator and also built the persistence layer(`file_helper.py`) to fully understand the saving process line by line instead of reaching for something imported and generated.
+I tried to keep storage as plain `.txt` files with `|` as a field separator and also built the persistence layer(`file_helper.py`) to fully understand the saving process line by line instead of reaching for something imported and generated.
 
-I built this app using basic Python commands and also for reusability which makes it ready to go and to be used in day to day life.
+I built this program using basic Python commands and also for reusability which makes it ready to go and to be used in day to day life.
+
 ## Features
 
 **1. Expense Management** - `expense_tracker.py`
