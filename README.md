@@ -4,7 +4,7 @@ A command-line budget and expense tracker written in Python for the VITyarthi "B
 
 ## Overview
 
-I split the app into four modules that map onto the four things a budget tracker actually needs to do: recording expenses, checking them against budgets, reporting on them, and tying them to a savings goal. `main.py` is just the menu loop - it doesn't do any of the actual logic itself, it calls into the other four files.
+I split the code into four modules that map onto the four things a budget tracker actually needs to do: recording expenses, checking them against budgets, reporting on them, and tying them to a savings goal. `main.py` is just the menu loop - it doesn't do any of the actual logic itself, it calls into the other four files.
 
 I kept storage as plain `.txt` files with `|` as a field separator and also built the persistence layer(`file_helper.py`) to fully understand the saving process line by line instead of reaching for something imported and generated.
 
@@ -70,17 +70,18 @@ budget_buddy/
 
 ## Testing
 
-There's no automated test suite - I tested this manually by running through every menu option end to end and checking the saved `.txt`/`.csv` files matched what I'd entered. Roughly the same walkthrough, if you want to check it yourself:
+There's no automated test suite - I tested this manually by running through every menu option end to end and checking the saved `.txt`/`.csv` files matched what I'd entered. Here's what I checked:
 
-1. Add two or three expenses across different categories (option 1), then view them (option 2) and confirm the amounts/categories/dates are right.
-2. Set a budget for one of those categories (option 6), then check the budget status (option 7) - confirm the "spent" total and the exceeded flag are correct.
-3. Update one expense and delete another (options 3 and 4), then re-view (option 2) to confirm the change stuck.
-4. Search by category and by amount range (option 5).
-5. Generate a report (option 8) and check the total/breakdown/average against what you'd expect by hand.
-6. Set a savings goal (option 9) and check progress (option 10) - do the months-left and required-monthly-savings numbers look right for the date and income you entered?
-7. Export to CSV (option 11) and open the file to confirm it matches.
-8. Exit and re-run the app - confirm everything you entered is still there (this checks that `file_helper.py`'s load/save actually round-trips correctly).
-9. Deliberately enter bad input - letters where an amount or an expense ID is expected, or a date not in `DD-MM-YYYY` - at the add, update, delete and search prompts, and confirm each one re-prompts instead of crashing.
+1.Added a few expenses and viewed them
+2.Set a budget and checked the status
+3.Updated and deleted expenses
+4.Tried searching with different filters
+5.Generated report and compared the numbers
+6.Set a savings goal and checked progress
+7.Exported to CSV
+8.Closed the program and opened it again to make sure data was still there
+9.Entered wrong inputs (letters instead of numbers, wrong date format) to see if it handles them properly
+
 
 **A bug I actually caught this way:** early on, `get_amount_input()` in `main.py` would crash with an `UnboundLocalError` if you typed something non-numeric, because the `except ValueError` block printed a message but didn't loop back before checking `amount < 0`. Adding a `continue` in the except block fixed it.
 
